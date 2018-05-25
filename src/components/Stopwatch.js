@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    Button
 } from 'react-native'
 
 class Stopwatch extends Component {
@@ -53,14 +54,33 @@ class Stopwatch extends Component {
         this.setState({currentCount: 0, secs: 0, mins: 0, hours: 0})
         clearInterval(this.intervalId)
     }
-        componentWillUnmount(){
+    
+    componentWillUnmount(){
         clearInterval(this.intervalId);
     }
 
-
     render() {
-        return (
-            <Text>Time</Text>
+        return (    
+            <View>
+                <Button 
+                    onPress={this.handleStart.bind(this)}
+                    title="Start"
+                />
+                <Button 
+                    onPress={this.handleStop.bind(this)} 
+                    title="Stop"
+                />
+                <Button 
+                    onPress={this.handleReset.bind(this)}
+                    title="Reset"
+                />
+                
+                <Text>{this.state.currentCount}</Text>
+
+                <Text>secs: {this.state.secs}</Text>
+                <Text>mins: {this.state.mins}</Text>
+                <Text>hours: {this.state.hours}</Text>
+            </View>
         )
     }
 }
