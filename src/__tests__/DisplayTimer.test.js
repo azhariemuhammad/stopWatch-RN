@@ -1,7 +1,6 @@
 import React from 'react';
 import Enzyme, {
-    shallow,
-    equal
+    shallow
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {

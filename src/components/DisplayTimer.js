@@ -5,14 +5,13 @@ import {
 } from 'react-native';
 
 export default DisplayTimer = props => {
-  console.log(props)
-  return (
-    <View>
-        <Text>Display Timer</Text>
-        <Text>{props.currentCount}</Text>
-        <Text>secs: {props.secs}</Text>
-        <Text>mins: {props.mins}</Text>
-        <Text>hours: {props.hours}</Text>
-    </View>
-  )
+    return (
+      <View>
+          <Text>Display Timer</Text>
+          <Text>{props.currentCount}</Text>
+          <Text>secs: {props.secs}</Text>
+          <Text>mins: {props.mins}</Text>
+          <Text>hours: {props.hours}</Text>
+      </View>
+    )
 }

@@ -63,6 +63,13 @@ class Stopwatch extends Component {
     render() {
         return (    
             <View>
+                <DisplayTimer 
+                    currentCount={this.state.currentCount}
+                    secs={this.state.secs}
+                    mins={this.state.mins}
+                    hours={this.state.hours}
+                 />
+
                 <Button 
                     onPress={this.handleStart.bind(this)}
                     title="Start"
@@ -75,13 +82,6 @@ class Stopwatch extends Component {
                     onPress={this.handleReset.bind(this)}
                     title="Reset"
                 />
-
-                <DisplayTimer 
-                    currentCount={this.state.currentCount}
-                    secs={this.state.secs}
-                    mins={this.state.mins}
-                    hours={this.state.hours}
-                 />
             </View>
         )
     }
