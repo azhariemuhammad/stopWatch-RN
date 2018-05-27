@@ -10,5 +10,4 @@ describe('<Stopwatch />', () => {
         const rendered = renderer.create(<Stopwatch />).toJSON();
         expect(rendered).toBeTruthy();
     })
-    
 })

@@ -6,6 +6,7 @@ import {
     Button
 } from 'react-native'
 
+import DisplayTimer from './DisplayTimer';
 class Stopwatch extends Component {
     constructor(props){
         super(props);
@@ -74,12 +75,13 @@ class Stopwatch extends Component {
                     onPress={this.handleReset.bind(this)}
                     title="Reset"
                 />
-                
-                <Text>{this.state.currentCount}</Text>
 
-                <Text>secs: {this.state.secs}</Text>
-                <Text>mins: {this.state.mins}</Text>
-                <Text>hours: {this.state.hours}</Text>
+                <DisplayTimer 
+                    currentCount={this.state.currentCount}
+                    secs={this.state.secs}
+                    mins={this.state.mins}
+                    hours={this.state.hours}
+                 />
             </View>
         )
     }
