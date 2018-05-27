@@ -21,17 +21,17 @@ class Stopwatch extends Component {
             this.setState({
                 currentCount: currentCount + 1
             })
-        if (currentCount === 100) {
+        if (currentCount === 10) {
             this.setState({
             secs: secs + 1,
             currentCount: 0
             })
-        } else if (secs === 60) {
+        } else if (secs === 59) {
             this.setState({
             secs: 0,
             mins: mins + 1
             })
-        } else if (mins === 60) {
+        } else if (mins === 59) {
             this.setState({
             mins: 0,
             hours: hours + 1
@@ -43,7 +43,7 @@ class Stopwatch extends Component {
     }
 
     handleStart() {
-        this.intervalId = setInterval(this.timer.bind(this), 10);
+        this.intervalId = setInterval(this.timer.bind(this), 100);
     }
 
     handleStop() {

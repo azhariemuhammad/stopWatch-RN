@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
 
-const DisplayTimer = (prop) => {
-  render() (
+import {
+    View,
+    Text
+} from 'react-native';
+
+export const DisplayTimer = (prop) => {
+  return (
     <View>
         <Text>Display Timer</Text>
     </View>
   )
 }
-
-export default DisplayTimer;
